@@ -20,8 +20,8 @@ function getGameTitles(gamesObjects){
 
 //test
 console.log("---Favorite Game Titles----");
-const allTitles = getGameTitles(RAW_GAMES);
-console.log(allTitles);
+const favoriteTitles = getGameTitles(getFavoriteGames(RAW_GAMES));
+console.log(favoriteTitles);
 
 console.log("---Favorite Games---");
 const favoriteGames = getFavoriteGames(RAW_GAMES);

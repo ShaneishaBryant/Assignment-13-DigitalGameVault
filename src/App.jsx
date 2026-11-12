@@ -4,6 +4,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
+const RAW_GAMES = [
+  { id: 1, title: "The Legend of Zelda", genre: "Adventure", favorite: true },
+  { id: 2, title: "Elden Ring", genre: "RPG", favorite: true },
+  { id: 3, title: "Stardew Valley", genre: "Simulation", favorite: false },
+  { id: 4, title: "Cyberpunk 2077", genre: "RPG", favorite: false },
+  { id: 5, title: "Hades", genre: "Roguelike", favorite: true }
+];
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,7 +24,7 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>My Digital Game Vault</h1>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
@@ -31,6 +39,14 @@ function App() {
       </section>
 
       <div className="ticks"></div>
+
+       {/* Digital Game Vault Section */} 
+       <div className="vault-grid">
+        {initialGames.map(game => (
+          <GameItem key={game.id} game={game} />
+        ))}
+       </div>
+
 
       <section id="next-steps">
         <div id="docs">
