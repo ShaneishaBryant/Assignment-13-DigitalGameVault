@@ -30,6 +30,13 @@ Phase 4 Response
 
 What challenges did you face when connecting your JavaScript logic to your React components? How did you debug the data flow from the raw array to the final screen?
 
-Due to me accidentally overwriting the program and creating a whole new set of src files my program was not connecting. I ran into an issue where my components folder did not have the GameItem.jsx export. Also, my logic.js file was outside of the src file so App.jsx was not able to access the import. I had to trace the data pipeline to debug the issue when my applicaiton started showing a persistent blank white screen. I continued to check the console for red error messages to pinpoint the exact error each time. 
-
 After accidentally overwriting some source files, my application suffered a persistent blank white screen and connection errors. I debugged the issue by checking the console for red error messages, which helped me isolate two problems: GameItem.jsx was missing its default export, and logic.js was placed outside the src directory, blocking module resolution. 
+
+
+
+Phase 5 Response 
+
+What bugs or unexpected behaviors did you catch while testing your program? If you asked an AI tutor for feedback, what did it suggest, and did you choose to make any changes? Explain your reasoning.
+
+
+The program responded as expected by updating objects in the array. The AI confirmed that my use of props and .map() followed best practices by cleanly separating business logic, data, and UI components. It also recommended introducing useState in App.jsx for interactive state management and utilizing localStorage for data persistence across page refreshes. I implemented the useState recommendation to gain hands-on practice writing JSX and handling dynamic state changes.

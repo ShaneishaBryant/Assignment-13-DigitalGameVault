@@ -22,6 +22,18 @@ function App() {
   //replaced hardcoded array with getFavoriteGame function
   const displayFavoriteGame = getFavoriteGames(RAW_GAMES);
 
+  //hold the game collection in component state 
+  const [games, setGames] = useState(RAW_GAMES);
+
+  //function to toggle a game's favorite status by ID
+  const handleToggleFavorite = (id) => {
+    setGames(prevGames => 
+      prevGames.map(game =>
+        game.id === id ? { ...game, favorite: !game.favorite } : game
+      )
+    );
+  };
+
 
   return (
     <>

@@ -4,7 +4,9 @@ export const RAW_GAMES = [
   { id: 2, title: "Elden Ring", genre: "RPG", favorite: true },
   { id: 3, title: "Stardew Valley", genre: "Simulation", favorite: false },
   { id: 4, title: "Cyberpunk 2077", genre: "RPG", favorite: false },
-  { id: 5, title: "Hades", genre: "Roguelike", favorite: true }
+  { id: 5, title: "Hades", genre: "Roguelike", favorite: true },
+  {id: 6, title: "The Regular Show", genre: "Adventure", favorite: true},
+  {id: 7, title: "The Real World", genre: "RPG", favorite: false},
 ];
 
 //function that returns only games where favorite is true 
