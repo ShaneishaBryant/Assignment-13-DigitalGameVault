@@ -2,18 +2,26 @@ import { useState } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
+import GameItem from './components/GameItem'
+import { RAW_GAMES, getFavoriteGames } from './logic' //imported data and HOF 
 import './App.css'
 
-const RAW_GAMES = [
-  { id: 1, title: "The Legend of Zelda", genre: "Adventure", favorite: true },
-  { id: 2, title: "Elden Ring", genre: "RPG", favorite: true },
-  { id: 3, title: "Stardew Valley", genre: "Simulation", favorite: false },
-  { id: 4, title: "Cyberpunk 2077", genre: "RPG", favorite: false },
-  { id: 5, title: "Hades", genre: "Roguelike", favorite: true }
-];
+
+
+// const RAW_GAMES = [
+//   { id: 1, title: "The Legend of Zelda", genre: "Adventure", favorite: true },
+//   { id: 2, title: "Elden Ring", genre: "RPG", favorite: true },
+//   { id: 3, title: "Stardew Valley", genre: "Simulation", favorite: false },
+//   { id: 4, title: "Cyberpunk 2077", genre: "RPG", favorite: false },
+//   { id: 5, title: "Hades", genre: "Roguelike", favorite: true }
+// ];
 
 function App() {
   const [count, setCount] = useState(0)
+
+  //replaced hardcoded array with getFavoriteGame function
+  const displayFavoriteGame = getFavoriteGames(RAW_GAMES);
+
 
   return (
     <>
@@ -42,7 +50,7 @@ function App() {
 
        {/* Digital Game Vault Section */} 
        <div className="vault-grid">
-        {initialGames.map(game => (
+        {displayFavoriteGame.map(game => (
           <GameItem key={game.id} game={game} />
         ))}
        </div>

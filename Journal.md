@@ -24,3 +24,12 @@ Phase 3 Response
 What is the main difference between writing standard HTML and writing JSX? How do props allow the GameItem component to be reusable?
 
 The difference is HTML is native markup language read directly by the web browser, while JSX is a syntax extension that gets compiled into standard Java before the browser processes it. Props make components reusable, meaning you only have to write a single GameItem component blueprint that dynamically handles any number of unique game objects.
+
+
+Phase 4 Response
+
+What challenges did you face when connecting your JavaScript logic to your React components? How did you debug the data flow from the raw array to the final screen?
+
+Due to me accidentally overwriting the program and creating a whole new set of src files my program was not connecting. I ran into an issue where my components folder did not have the GameItem.jsx export. Also, my logic.js file was outside of the src file so App.jsx was not able to access the import. I had to trace the data pipeline to debug the issue when my applicaiton started showing a persistent blank white screen. I continued to check the console for red error messages to pinpoint the exact error each time. 
+
+After accidentally overwriting some source files, my application suffered a persistent blank white screen and connection errors. I debugged the issue by checking the console for red error messages, which helped me isolate two problems: GameItem.jsx was missing its default export, and logic.js was placed outside the src directory, blocking module resolution. 
